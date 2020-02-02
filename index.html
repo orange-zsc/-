@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+       /*.zju{
+          	height:200px;
+			width:200px;
+			top:100px;
+			left:200px;
+			position:absolute;
+       }
+	</style>
+</head>
+<body>
+  <div id="zju">
+    <img border="0" src="file:\\\D:\浙江大学\微信小程序设计\作业\作业3\4\图片嘿嘿.jpg">
+  </div>
+  <script type="text/javascript"></script>
+  <script>
+    /*var zju=document.getElementById('zju');
+    var width=Math.random()*w_width;
+    var height=Math.random()*w_height;
+    zju.style.left=width+"px";
+    zju.style.top=height+'px';
+    const w_width=window.screen.availWidth-200;
+    const w_height=window.screen.availHeight-200;
+    var width=Math.random()*w_width;
+    var height=Math.random()*w_height;
+    zju.style.left=width+"px";
+    zju.style.top=height+'px';*/
+    var zju=document.getElementById('zju');
+    const w_width=window.screen.availWidth-200;
+    const w_height=window.screen.availHeight-200;
+    var width=Math.random()*w_width;
+    var height=Math.random()*w_height;
+    zju.style.left=width+"px";
+    zju.style.top=height+'px';
+    var vx=30;
+    var vy=30;
+    function changePos(){
+       if ((width+vx)>=w_width||(width+vx)<=0){
+       	vx=-vx;
+       }
+       width=width+vx;
+       if((height+vy)>=w_height||(height+vy)<=0){
+       	vy=-vy;
+       }
+       height=height+vy;
+       zju.style.left=width+"px";
+       zju.style.top=height+"px";
+    }
+    setInterval(changePos,1000);
+
+
+  </script>	
+</body>
+</html>
